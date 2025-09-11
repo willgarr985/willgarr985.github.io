@@ -3,10 +3,9 @@ body {
 }
 
 canvas {
-  background-color: lightblue;
+  background-color: black;
   margin: 20px;
 }
 
 img {
   display: none;
-}
