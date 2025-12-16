@@ -35,15 +35,12 @@ var init = function (window) {
 
 
         // TODO 3 : Call the drawCircle() function
-        drawCircle(circles[0]);
-        drawCircle(circles[1]);
-        drawCircle(circles[2]);
-        drawCircle(circles[3]);
-        drawCircle(circles[4]);
-
+        
 
         // TODO 7 : Use a loop to create multiple circles
-       
+       for (var i = 0; i <25; i++){
+        drawCircle();
+       }
 
 
 
@@ -58,26 +55,22 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
-          physikz.updatePostion(circles[0]);
-          physikz.updatePostion(circles[1]);
-          physikz.updatePostion(circles[2]);
-          physikz.updatePostion(circles[3]);
-          physikz.updatePostion(circles[4]);
           
 
             // TODO 5 : Call game.checkCirclePosition() on your circles
-           game.checkCirclePosition(circles[0]);
-           game.checkCirclePosition(circles[1]);
-           game.checkCirclePosition(circles[2]);
-           game.checkCirclePosition(circles[3]);
-           game.checkCirclePosition(circles[4]);
-
+           
 
 
 
 
             // TODO 8 / TODO 9 : Iterate over the array
-           
+           for (var i = 0; i < circles.length; i++){
+            var everyCircle = circles[i];
+             physikz.updatePosition(everyCircle);
+             game.checkCirclePosition(everyCircle);
+
+
+           }
             
         }
     
